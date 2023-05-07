@@ -1,5 +1,7 @@
 function ColorMyPencils(color)
 	--color = color or "rose-pine"
+
+    --Sets theme
     color = color or "catppuccin"
 	vim.cmd.colorscheme(color)
 
