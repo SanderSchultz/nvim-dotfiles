@@ -33,13 +33,28 @@ return require('packer').startup(function(use)
 
     --Treesitter
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
 
-	use('nvim-treesitter/playground')
+    --Smooth scrolling
+    use('psliwka/vim-smoothie')
+
+    --File explorer
+    --[[ use {'nvim-tree/nvim-tree.lua'}
+    use {'nvim-tree/nvim-web-devicons'} ]]
+
+    --Harpoon
 	use('ThePrimeagen/harpoon')
+
+    --Undotree
 	use('mbbill/undotree')
+
+    --Git stuff
 	use('tpope/vim-fugitive')
+
+    --Statusline
 	use('b3nj5m1n/kommentary')
 
+    --Commenting out stuff
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -47,6 +62,7 @@ return require('packer').startup(function(use)
         end
         }
 
+    --LSP
 	use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',

@@ -49,3 +49,6 @@ vim.keymap.set('i', '{', '{}<Left>', {})
 
 --Sets mappings to toggle error diagnostics
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", {silent = true, noremap = true})
+
+--Toggle File Explorer Nvim-tree
+-- vim.keymap.set("n", "<leader>ff", "<cmd>NvimTreeToggle<cr>", {silent = true, noremap = true})

@@ -1,7 +1,7 @@
 local builtin = require('telescope.builtin')
 
 --Opens fuzzy finder for files in the same folder that was opened
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<C-x>', builtin.find_files, {})
 
 --Opens fuzzy finder for files related to Git
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
