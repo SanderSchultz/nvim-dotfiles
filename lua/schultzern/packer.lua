@@ -11,17 +11,27 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	-- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-	}
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {}
+      end
+    }
 
-	--use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    --Themes
     use { "catppuccin/nvim", as = "catppuccin" }
+    use {"rebelot/kanagawa.nvim", as = "kanagawa"}
+    use {"junegunn/seoul256.vim", as = "seoul256"}
+    use {"sainnhe/everforest", as = "everforest"}
+    use {"folke/tokyonight.nvim", as = "tokyonight"}
 
-	--vim.cmd('colorscheme rose-pine')
-    --vim.cmd('colorscheme catppuccin')
-
+    --Treesitter
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	use('nvim-treesitter/playground')
