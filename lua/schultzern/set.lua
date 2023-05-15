@@ -2,6 +2,12 @@
 --[[ require("nvim-tree").setup()
 require("nvim-web-devicons").setup() ]]
 
+local custom_everforest = require('lualine.themes.everforest')
+
+require('lualine').setup {
+  options = { theme  = custom_everforest },
+}
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true

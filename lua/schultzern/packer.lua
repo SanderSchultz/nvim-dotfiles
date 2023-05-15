@@ -38,6 +38,12 @@ return require('packer').startup(function(use)
     --Smooth scrolling
     use('psliwka/vim-smoothie')
 
+    --Line bottom
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
     --File explorer
     --[[ use {'nvim-tree/nvim-tree.lua'}
     use {'nvim-tree/nvim-web-devicons'} ]]
