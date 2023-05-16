@@ -45,8 +45,8 @@ return require('packer').startup(function(use)
     }
 
     --File explorer
-    --[[ use {'nvim-tree/nvim-tree.lua'}
-    use {'nvim-tree/nvim-web-devicons'} ]]
+    use {'nvim-tree/nvim-tree.lua'}
+    use {'nvim-tree/nvim-web-devicons'}
 
     --Harpoon
 	use('ThePrimeagen/harpoon')
