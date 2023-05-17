@@ -8,6 +8,8 @@ require('lualine').setup {
   options = { theme  = custom_everforest },
 }
 
+vim.opt.showmode = false
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
