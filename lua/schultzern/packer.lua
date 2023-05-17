@@ -8,8 +8,10 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  --Github copilot
   use 'github/copilot.vim'
 
+  --Check full messages of errors
   use {
       "folke/trouble.nvim",
       requires = "nvim-tree/nvim-web-devicons",
@@ -18,6 +20,7 @@ return require('packer').startup(function(use)
       end
     }
 
+    --Fuzzy finder for files in project
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
       -- or                            , branch = '0.1.x',
@@ -31,14 +34,14 @@ return require('packer').startup(function(use)
     use {"sainnhe/everforest", as = "everforest"}
     use {"folke/tokyonight.nvim", as = "tokyonight"}
 
-    --Treesitter
+    --Treesitter - color highlighting for code
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
 
     --Smooth scrolling
     use('psliwka/vim-smoothie')
 
-    --Line bottom
+    --Description Line bottom
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -48,17 +51,17 @@ return require('packer').startup(function(use)
     use {'nvim-tree/nvim-tree.lua'}
     use {'nvim-tree/nvim-web-devicons'}
 
-    --Harpoon
+    --Harpoon - quick file navigation
 	use('ThePrimeagen/harpoon')
 
-    --Undotree
+    --Undotree - undo history
 	use('mbbill/undotree')
 
     --Git stuff
 	use('tpope/vim-fugitive')
 
-    --Statusline
-	use('b3nj5m1n/kommentary')
+    --Commenting out stuff
+	-- use('b3nj5m1n/kommentary')
 
     --Commenting out stuff
     use {
