@@ -3,10 +3,12 @@ function ColorMyPencils(color)
     require("nvim-tree").setup()
     require("nvim-web-devicons").setup()
 
-    local custom_everforest = require('lualine.themes.everforest')
+    -- local custom_everforest = require('lualine.themes.everforest')
+    local custom_gruvbox = require('lualine.themes.gruvbox')
 
     require('lualine').setup {
-      options = { theme  = custom_everforest },
+      -- options = { theme  = custom_everforest },
+      options = { theme  = custom_gruvbox },
     }
 
     --Sets theme

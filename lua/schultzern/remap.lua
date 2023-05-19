@@ -1,4 +1,3 @@
-
 --Sets the mapleader key
 vim.g.mapleader = ","
 
