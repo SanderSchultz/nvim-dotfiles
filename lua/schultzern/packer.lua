@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
     use {"junegunn/seoul256.vim", as = "seoul256"}
     use {"sainnhe/everforest", as = "everforest"}
     use {"folke/tokyonight.nvim", as = "tokyonight"}
+    use {"morhetz/gruvbox", as = "gruvbox"}
 
     --Treesitter - color highlighting for code
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})

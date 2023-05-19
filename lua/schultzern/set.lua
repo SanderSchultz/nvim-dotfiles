@@ -1,13 +1,4 @@
 
-require("nvim-tree").setup()
-require("nvim-web-devicons").setup()
-
-local custom_everforest = require('lualine.themes.everforest')
-
-require('lualine').setup {
-  options = { theme  = custom_everforest },
-}
-
 vim.opt.showmode = false
 
 vim.opt.nu = true
