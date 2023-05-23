@@ -62,9 +62,6 @@ return require('packer').startup(function(use)
 	use('tpope/vim-fugitive')
 
     --Commenting out stuff
-	-- use('b3nj5m1n/kommentary')
-
-    --Commenting out stuff
     use {
         'numToStr/Comment.nvim',
         config = function()

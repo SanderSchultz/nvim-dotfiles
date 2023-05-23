@@ -16,7 +16,7 @@ end)
 --Searches for string in current buffer
 vim.keymap.set('n', '/', function()
 
-    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_ivy {
         windblend = 20,
         previewer = false,
     })
