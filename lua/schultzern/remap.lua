@@ -29,8 +29,8 @@ vim.keymap.set('n', '<C-s>', ':w<CR>', {noremap = true})
 --Sets Ctrl + q to quit like :q!
 vim.keymap.set('n', '<C-q>', ':q!<CR>', {noremap = true})
 
---Sets Ctrl + t to open new terminal in left split
-vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR>')
+--Sets Ctrl + t to open new terminal in left split and resize it to 50%
+vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR> :vertical resize 50<CR>')
 
 --Sets from terminal Job mode to terminal Normal mode so I can swap between terminal and code
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
