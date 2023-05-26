@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
     use {'nvim-tree/nvim-web-devicons'}
 
     --Blazor LSP?
-    use {'jlcrochet/vim-razor'}
+    -- use {'jlcrochet/vim-razor'}
 
     --Harpoon - quick file navigation
 	use('ThePrimeagen/harpoon')
