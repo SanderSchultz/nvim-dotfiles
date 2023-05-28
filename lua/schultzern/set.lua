@@ -5,6 +5,13 @@ vim.opt.showmode = false
 vim.o.updatetime = 250
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus = false})]]
 
+--Sets signs in the gutter for diagnostics
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
