@@ -2,8 +2,10 @@
 vim.opt.showmode = false
 
 --Sets Diagnostic popup if error after hovering cursor for 250ms
-vim.o.updatetime = 250
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus = false})]]
+-- vim.o.updatetime = 250
+
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus = false})]]
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.defer_fn(function() vim.diagnostic.open_float(nil, {focus = false}) end, 3000)]]
 
 --Sets signs in the gutter for diagnostics
 local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }

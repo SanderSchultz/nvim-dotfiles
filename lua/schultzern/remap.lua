@@ -1,6 +1,12 @@
 --Sets the mapleader key
 vim.g.mapleader = ","
 
+--Sets the keymaps open diagnostic on error I am on
+vim.keymap.set('n', '<leader>d', ':lua vim.diagnostic.open_float(nil, {focus = false})<CR>', {noremap = true, silent = true})
+
+--Sets the keymaps to replace name of variables at once
+vim.keymap.set('n', '<leader>r', ':%s/')
+
 --Opens the netrw dir
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -47,7 +53,7 @@ vim.keymap.set('i', '[', '[]<Left>', {})
 vim.keymap.set('i', '{', '{}<Left>', {})
 
 --Sets mappings to toggle error diagnostics
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", {silent = true, noremap = true})
+-- vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", {silent = true, noremap = true})
 
 --Toggle File Explorer Nvim-tree
 vim.keymap.set("n", "<leader>ff", "<cmd>NvimTreeToggle<cr>", {silent = true, noremap = true})

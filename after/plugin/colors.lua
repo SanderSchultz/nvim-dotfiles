@@ -1,6 +1,7 @@
 function ColorMyPencils(color)
 
     require("nvim-tree").setup()
+
     require("nvim-web-devicons").setup()
 
     local custom_everforest = require('lualine.themes.everforest')
