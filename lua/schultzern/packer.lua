@@ -12,13 +12,13 @@ return require('packer').startup(function(use)
   use 'github/copilot.vim'
 
   --Check full messages of errors
-  use {
-      "folke/trouble.nvim",
-      requires = "nvim-tree/nvim-web-devicons",
-      config = function()
-        require("trouble").setup {}
-      end
-    }
+  -- use {
+  --     "folke/trouble.nvim",
+  --     requires = "nvim-tree/nvim-web-devicons",
+  --     config = function()
+  --       require("trouble").setup {}
+  --     end
+  --   }
 
     --Fuzzy finder for files in project
     use {
