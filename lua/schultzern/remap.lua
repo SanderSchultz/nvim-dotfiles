@@ -1,3 +1,5 @@
+--For checking diagnostics of an error do <leader>d
+
 --Sets the mapleader key
 vim.g.mapleader = ","
 
@@ -6,6 +8,7 @@ vim.keymap.set('n', '<leader>d', ':lua vim.diagnostic.open_float(nil, {focus = f
 
 --Sets the keymaps to replace name of variables at once
 vim.keymap.set('n', '<leader>r', ':%s/')
+
 
 --Opens the netrw dir
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
