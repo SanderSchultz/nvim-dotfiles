@@ -1,5 +1,6 @@
 --For checking diagnostics of an error do <leader>d
 --For opening fzf in normal terminal do Alt+c
+--Telescope file finder Ctrl+X, press C-v for vsplit, C-x for split, C-t for new tab
 
 --Sets the mapleader key
 vim.g.mapleader = ","
