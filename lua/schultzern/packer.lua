@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
     --Fuzzy finder for files in project
     use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+      'nvim-telescope/telescope.nvim',
       -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
