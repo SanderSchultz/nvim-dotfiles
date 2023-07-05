@@ -1,4 +1,5 @@
 --For checking diagnostics of an error do <leader>d
+--For opening fzf in normal terminal do Alt+c
 
 --Sets the mapleader key
 vim.g.mapleader = ","
@@ -8,7 +9,6 @@ vim.keymap.set('n', '<leader>d', ':lua vim.diagnostic.open_float(nil, {focus = f
 
 --Sets the keymaps to replace name of variables at once
 vim.keymap.set('n', '<leader>r', ':%s/')
-
 
 --Opens the netrw dir
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
@@ -27,7 +27,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 --Changes permissions of file i am in to be executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {silent = true})
 
 --Sets Ctrl + z to go back just like u
 vim.keymap.set('n', '<C-z>', ':undo<CR>', {noremap = true})
@@ -38,8 +38,8 @@ vim.keymap.set('n', '<C-s>', ':w<CR>', {noremap = true})
 --Sets Ctrl + q to quit like :q!
 vim.keymap.set('n', '<C-q>', ':q!<CR>', {noremap = true})
 
---Sets Ctrl + t to open new terminal in left split and resize it to 50%
-vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR> :vertical resize 50<CR>')
+--Sets Ctrl + t to open new terminal in left split and resize it to 40%
+vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR> :vertical resize 40<CR>')
 
 --Sets from terminal Job mode to terminal Normal mode so I can swap between terminal and code
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
