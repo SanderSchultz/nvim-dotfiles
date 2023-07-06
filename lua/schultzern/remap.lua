@@ -46,10 +46,11 @@ vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR> :vertical resize 4
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
 
 --Sets the keymaps to move between file that are open when displayed more than one, normally Ctrl + w and then one of HJKL
-vim.keymap.set('n', '<C-h>', '<C-w>h', {noremap = true})
-vim.keymap.set('n', '<C-l>', '<C-w>l', {noremap = true})
-vim.keymap.set('n', '<C-j>', '<C-w>j', {noremap = true})
-vim.keymap.set('n', '<C-k>', '<C-w>k', {noremap = true})
+-- vim.keymap.set('n', '<C-h>', '<C-w>h', {noremap = true})
+-- vim.keymap.set('n', '<C-l>', '<C-w>l', {noremap = true})
+-- vim.keymap.set('n', '<C-j>', '<C-w>j', {noremap = true})
+-- vim.keymap.set('n', '<C-k>', '<C-w>k', {noremap = true})
+
 
 --Sets mappings to complete parentheses and quotes
 vim.keymap.set('i', '(', '()<Left>', {})

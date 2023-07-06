@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
   --     end
   --   }
 
+    use('christoomey/vim-tmux-navigator')
+
     --Fuzzy finder for files in project
     use {
       'nvim-telescope/telescope.nvim',
