@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
   --Github copilot
   use 'github/copilot.vim'
 
+  --Do :Test to run tests
   use 'vim-test/vim-test'
 
   --Check full messages of errors
