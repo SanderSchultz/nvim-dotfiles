@@ -2,6 +2,14 @@
 --For opening fzf in normal terminal do Alt+c
 --Telescope file finder Ctrl+X, press C-v for vsplit, C-x for split, C-t for new tab
 
+local function update_all()
+    vim.cmd('TSUpdate')
+    vim.cmd('PackerSync')
+    vim.cmd('Mason')
+end
+
+vim.api.nvim_create_user_command('UpdateAll', update_all, {})
+
 --Sets the mapleader key
 vim.g.mapleader = ","
 

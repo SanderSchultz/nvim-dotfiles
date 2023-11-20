@@ -1,4 +1,5 @@
 require("schultzern")
+require("schultzern.packer")
 vim.g.clipboard = {
   name = "xclip-cc",
   copy = {
