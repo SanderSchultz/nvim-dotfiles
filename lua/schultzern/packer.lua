@@ -8,20 +8,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  --Github copilot
-  use 'github/copilot.vim'
-
   --Do :Test to run tests
   use 'vim-test/vim-test'
-
-  --Check full messages of errors
-  -- use {
-  --     "folke/trouble.nvim",
-  --     requires = "nvim-tree/nvim-web-devicons",
-  --     config = function()
-  --       require("trouble").setup {}
-  --     end
-  --   }
 
     use('christoomey/vim-tmux-navigator')
 
@@ -33,7 +21,8 @@ return require('packer').startup(function(use)
     }
 
     --Themes
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use {"AlexvZyl/nordic.nvim", as = "nordic"}
+    use {"catppuccin/nvim", as = "catppuccin" }
     use {"rebelot/kanagawa.nvim", as = "kanagawa"}
     use {"junegunn/seoul256.vim", as = "seoul256"}
     use {"sainnhe/everforest", as = "everforest"}
@@ -57,9 +46,6 @@ return require('packer').startup(function(use)
     use {'nvim-tree/nvim-tree.lua'}
     use {'nvim-tree/nvim-web-devicons'}
 
-    --Blazor LSP?
-    -- use {'jlcrochet/vim-razor'}
-
     --Harpoon - quick file navigation
 	use('ThePrimeagen/harpoon')
 
@@ -71,11 +57,11 @@ return require('packer').startup(function(use)
 
     --Commenting out stuff
     use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-        }
+         'numToStr/Comment.nvim',
+         config = function()
+             require('Comment').setup()
+         end
+         }
 
     --LSP
 	use {
