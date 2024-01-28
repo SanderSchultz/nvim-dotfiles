@@ -8,6 +8,9 @@ local function update_all()
     vim.cmd('Mason')
 end
 
+--Goes to definition
+vim.keymap.set('n', 'def', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+
 vim.api.nvim_create_user_command('UpdateAll', update_all, {})
 
 --Sets the mapleader key
