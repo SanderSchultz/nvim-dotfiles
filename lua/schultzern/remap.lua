@@ -8,9 +8,26 @@ local function update_all()
     vim.cmd('Mason')
 end
 
+-- Create an autocommand group for LaTeX specific settings
+vim.api.nvim_create_augroup('LaTeX', { clear = true })
+
+-- Autocommands for LaTeX files
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'tex',
+  group = 'LaTeX',
+  callback = function()
+    -- Remap when in a .tex file
+    vim.api.nvim_buf_set_keymap(0, 'n', 'j', 'gj', {noremap = true, silent = true})
+    vim.api.nvim_buf_set_keymap(0, 'n', 'k', 'gk', {noremap = true, silent = true})
+    vim.api.nvim_buf_set_keymap(0, 'n', '$', 'g<space>', {noremap = true, silent = true})
+    vim.api.nvim_buf_set_keymap(0, 'n', '0', 'gn', {noremap = true, silent = true})
+  end
+})
+
 --Goes to definition
 vim.keymap.set('n', 'def', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
 
+--Runs the update_all function
 vim.api.nvim_create_user_command('UpdateAll', update_all, {})
 
 --Sets the mapleader key

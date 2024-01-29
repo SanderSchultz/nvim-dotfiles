@@ -29,6 +29,9 @@ return require('packer').startup(function(use)
     use {"folke/tokyonight.nvim", as = "tokyonight"}
     use {"morhetz/gruvbox", as = "gruvbox"}
 
+    --For LaTeX in nvim
+    use 'lervag/vimtex'
+
     --Treesitter - color highlighting for code
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
