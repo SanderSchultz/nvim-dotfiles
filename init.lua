@@ -1,14 +1,14 @@
 require("schultzern")
 require("schultzern.packer")
 vim.g.clipboard = {
-  name = "xclip-cc",
+  name = "wl-clipboard",
   copy = {
-    ["+"] = "xclip -selection clipboard -i",
-    ["*"] = "xclip -selection primary -i",
+    ["+"] = "wl-copy",
+    ["*"] = "wl-copy",
   },
   paste = {
-    ["+"] = "xclip -selection clipboard -o",
-    ["*"] = "xclip -selection primary -o",
+    ["+"] = "wl-paste",
+    ["*"] = "wl-paste",
   },
   cache_enabled = 0,
 }

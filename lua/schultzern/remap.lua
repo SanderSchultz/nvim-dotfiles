@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 --Goes to definition
-vim.keymap.set('n', 'def', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', 'gd', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
 
 --Runs the update_all function
 vim.api.nvim_create_user_command('UpdateAll', update_all, {})
@@ -68,10 +68,10 @@ vim.keymap.set('n', '<C-s>', ':w<CR>', {noremap = true})
 vim.keymap.set('n', '<C-q>', ':q!<CR>', {noremap = true})
 
 --Sets Ctrl + t to open new terminal in left split and resize it to 40%
-vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR> :vertical resize 40<CR>')
+-- vim.keymap.set('n', '<C-t>', ':botright vsplit | terminal<CR> :vertical resize 40<CR>')
 
 --Sets from terminal Job mode to terminal Normal mode so I can swap between terminal and code
-vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
+-- vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
 
 --Sets the keymaps to move between file that are open when displayed more than one, normally Ctrl + w and then one of HJKL
 -- vim.keymap.set('n', '<C-h>', '<C-w>h', {noremap = true})
