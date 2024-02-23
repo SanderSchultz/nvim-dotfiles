@@ -30,6 +30,9 @@ vim.keymap.set('n', 'gd', '<cmd>vsplit | lua vim.lsp.buf.definition()<CR>', {nor
 --Runs the update_all function
 vim.api.nvim_create_user_command('UpdateAll', update_all, {})
 
+--Opens a new terminal in the same dir
+vim.keymap.set('n', '<C-t>', ':!konsole --workdir %:p:h & disown<CR><CR>', {noremap = true, silent = true})
+
 --Sets the mapleader key
 vim.g.mapleader = ","
 
