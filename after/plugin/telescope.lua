@@ -6,9 +6,10 @@ local open_in_new_terminal = function(prompt_bufnr)
     local selection = action_state.get_selected_entry()
     local filepath = selection.path
     -- Adjust the terminal command according to your setup
-    local cmd = string.format("konsole -e nvim '%s'", filepath)
+    local cmd = string.format("konsole -e nvim '%s' &", filepath)
     actions.close(prompt_bufnr)
-    vim.cmd(string.format('!%s', cmd))
+    -- vim.cmd(string.format('!%s', cmd))
+    vim.fn.system(cmd)
 end
 
 -- Set up your mappings and include the custom action for Ctrl + V
